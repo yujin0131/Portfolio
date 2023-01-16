@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Lilita+One&family=Noto+Serif+KR&family=Suez+One&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    background:rgb(255, 255, 255);
+    scrollbar-width: none;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background:rgb(75, 75, 75);
+    top: 0;
+}
+
+.home{
+    padding-left: 2%;
+    color: rgb(255, 255, 255);
+    text-decoration: underline; 
+    text-underline-position:under;
+}
+
+.menu_bar {
+    display: inline-block;
+    padding-right: 5%;
+    color: rgb(255, 255, 255);
+}
+
+.menu ul {
+    list-style: none;
+}
+  
+.menu li {
+    display: inline-block;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 24px;
+}
+  
+.menu li:last-child {
+    margin-right: 0;
+}
+
+
+.blog {
+    background:rgba(253, 252, 252, 0.658); 
+    border-radius: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 200px;
+    height: 250px; 
+    display: grid;
+    text-align: center; 
+}
+
+h1 > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family:'Grandstander', cursive;
+}
+
