@@ -1,0 +1,15 @@
+.aboutMe {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.img {
+    width: 400px;
+    display: flex;
+}
+
+.text {
+    width:600px;
+}

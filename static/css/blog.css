@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Lilita+One&family=Noto+Serif+KR&family=Suez+One&display=swap');
+
+.blog a:hover {
+    transform: scale(1.2);
+    transition-duration: 0.1s;
+    color:rgb(115, 61, 241);
+}
+
+.blog a {   
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family:'Grandstander', cursive;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.blog {
+    background:rgba(253, 252, 252, 0.658); 
+    border-radius: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 200px;
+    height: 250px; 
+    display: grid;
+    text-align: center; 
+}
