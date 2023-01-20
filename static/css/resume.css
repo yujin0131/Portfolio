@@ -1,0 +1,55 @@
+.Resume {
+    overflow:hidden;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+@keyframes fadeInup {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 200px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInup2 {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+
+    10% {
+        opacity: 0;
+        transform: translate3d(0, 150px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.left {
+    animation: fadeInup 0.95s;
+    width: 430px;
+    margin: 0 0 0 auto;
+    padding-left: 30px;
+}
+
+h5, h4 {
+    margin: 0 0 5px 0;
+}
+.center {
+    width: 30px;
+}
+
+.right {
+    animation: fadeInup2 1.3s;
+    width: 400px;
+    margin: 0 auto 0 0; 
+}

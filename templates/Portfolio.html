@@ -22,9 +22,9 @@
                     <a class="a-menu" onClick="location.href='/aboutMe'">About Me</a>
                 </li>
                 <li>
-                    <a class="a-menu" onClick="location.href='/Skills'">Skills</a>
+                    <a class="a-menu" onClick="location.href='/Resume'">Resume</a>
                 </li>
-                <li style="color: rgb(255, 239, 166); opacity : 1;" >
+                <li style="opacity : 1; filter: brightness(1.9);" >
                     <a class="a-menu" onClick="location.href='/Portfolio'">Portfolio</a>
                 </li>
                 <li>
@@ -34,8 +34,36 @@
             </div>
         </div>
 
-        <div class="">
-            
+        <div class="portfolio">
+
+            <table border="1">
+                {% for i in 10 
+                    if(i % 3 == 0) 
+                        if(i != 1)  %}
+                            </tr>
+                            {% endif %}
+                        <tr>
+                    {% else: %}
+                        <td>dd</td>
+                    {% endif %}
+                {% endfor %}
+
+            </table>
+
+            <h4>
+                <a class="portfolio-links" href="https://github.com/DEVengersAssemble/airdnd-backend">Github Link</a>
+            </h4>
+            <hr>
+            <h4>팀 프로젝트 - Airdnd</h4>
+            <hr>
+            <p>프로젝트 기간 : </p>
+            <p>사용 프로그램 : </p>
+            <p>사용 언어 : </p>
+            <hr>
+            <p>[프로젝트 설명]</p>
+            <br>
+            ~~~
+
 
         <div>
 

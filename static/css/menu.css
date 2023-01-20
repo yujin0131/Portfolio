@@ -7,7 +7,7 @@ html,body {
     flex-direction: row;
     width: 100%;
     left: 0;
-    background:rgb(75, 75, 75);
+    background:rgb(37, 37, 37);
     top: 0;
 }
 
@@ -47,8 +47,9 @@ html,body {
 .menu_bar li:hover {
     transition: 0.2s ease-out;
     opacity : 1;
-    color: rgb(255, 239, 166);
+    filter: brightness(1.9);
 }
+
   
 .menu_bar li:last-child {
     margin-right: 0;
