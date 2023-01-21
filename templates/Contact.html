@@ -37,8 +37,40 @@
             </div>
         </div>
 
-        <div class="">
+        <div class="blog">
+            <!-- <table border="1">
+                <tr>
+                    <th>title</th>
+                    <th>postUrl</th>
+                    <th>date</th>
+                <tr/> 
+                {% for item in list %}
+                <tr>
+                    {% for i in item %}
+                    <td>
+                        <option>{{i}}</option>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table> -->
+            {% for item in list %}
+            <div class="blog_main" onclick="location.href='{{item[1]}}';" > 
+                <div class="blog_tite">
+                    {{item[0]}}
+                </div>
+                <div class="blog_sub">
+                    <div class="blog_date">
+                        {{item[2]}}
+                    </div>
+                    <div class="blog_pastDate">
+                        {{item[3]}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
             
+
 
         <div>
 

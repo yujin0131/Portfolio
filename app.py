@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import blogAPI as blog
 
 app = Flask("My Blog")
 
@@ -10,9 +11,9 @@ def home():
 def aboutMe():
     return render_template("aboutMe.html")
 
-@app.route("/Skills")
+@app.route("/Resume")
 def skills():
-    return render_template("Skills.html")
+    return render_template("Resume.html")
 
 @app.route("/Portfolio")
 def portfolio():
@@ -20,6 +21,7 @@ def portfolio():
 
 @app.route("/Contact")
 def contact():
-    return render_template("Contact.html")
+    res = blog.api()
+    return render_template("Contact.html", list=res)
 
 app.run(port=131, debug=True)
