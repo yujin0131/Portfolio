@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Raleway:wght@700&family=Rubik&display=swap');
+
+body{
+    -ms-overflow-style: none;
+}
+    
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.portfolio {
+    width: 1110px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Black Han Sans', sans-serif;
+    display: grid;
+	grid-template-columns: 33% 33% 33%;
+    padding: 15px 50px 0 50px;
+    margin: auto;
+}
+.portfolio_one {
+    position: relative; 
+    height: 300px;
+    width: 370px;
+}
+.portfolio_before {
+    position: absolute; 
+    height: 300px;
+    width: 370px;
+}
+
+.portfolio_before img{
+    position: absolute; top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.portfolio_after {
+    height: 300px;
+    width: 370px;
+    background-color: #F5F5F5;
+    position: absolute; 
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portfolio_one:hover > .portfolio_after{
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolio_one:hover > .portfolio_after > .group > .button {
+    animation: slideUp 0.5s;
+}
+
+.portfolio_one:hover > .portfolio_after > .group > .title, .portfolio_one:hover > .portfolio_after > .group > .stack {
+    animation: slideDown 0.5s;
+}
+
+.portfolio_after > .group {
+    width: 280px;
+    height: 150px;
+    margin: 75px 0 0 50px;
+}
+
+.portfolio_after > .group > .title {
+    font-size: 20px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+}
+
+.portfolio_after > .group > .stack {
+    font-family: 'Dosis', sans-serif;
+    font-size: 15px;
+    width: 250px;
+    text-align: center;
+    height: 60px;
+    margin: 0 auto 30px auto;
+    color: rgb(107, 72, 181);
+}
+
+.portfolio_after > .group > .button {
+    font-family: 'Rubik', sans-serif;
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    margin: auto;
+    padding: 10px 0 0 0;
+    border: 3px solid rgb(107, 72, 181);
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(107, 72, 181);
+    transition: 0.5s;
+}
+
+.portfolio_popup {
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    position: absolute; 
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 615px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
+    display: none;
+    padding: 20px 20px 0 20px;
+}
+
+.portfolio_popup_content {
+    height: 90%;
+}
+
+.portfolio_popup_link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    width: 110px;
+    height: 30px;
+    text-align: center;
+    float: left;
+    padding: 12px 0 0 0;
+    background-color: rgb(107, 72, 181);
+    color: white;
+}
+
+.portfolio_popup_link:hover {
+    background-color: white;
+    color: rgb(107, 72, 181);
+    transition: 0.5s;
+}
+
+.portfolio_popup_exit {
+    font-size: 25px;
+    float: right;
+}

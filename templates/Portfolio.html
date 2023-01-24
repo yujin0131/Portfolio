@@ -5,8 +5,29 @@
         @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Serif+KR&family=Suez+One&display=swap');
     </style>
 
+    <script>
+        function popup(value){
+            var id = document.getElementById("popup_" + value);
+            id.style.display = 'block';
+        }
+
+        function popup_exit(value){
+            var id = document.getElementById("popup_" + value);
+            id.style.display = 'none';
+        }
+
+        // 외부영역 클릭 시 팝업 닫기
+        $(document).mouseup(function (e){
+            var LayerPopup = $(".portfolio_popup");
+            if(LayerPopup.has(e.target).length === 0){
+                LayerPopup.removeClass("show");
+            }
+        });
+
+    </script>
     <head>
-        <link rel="stylesheet" href="../static/css/menu.css"/><!-- 'Lilita One', cursive;   'Suez One', serif;-->
+        <link rel="stylesheet" href="../static/css/menuBar.css"/>
+        <link rel="stylesheet" href="../static/css/portfolio.css"/>
         <title>yujin's Brain</title>
     </head>
     <body> <!-- style="background-image: url('/resources/1.jpg'); background-repeat:no-repeat; background-size: cover;" -->
@@ -28,30 +49,44 @@
                     <a class="a-menu" onClick="location.href='/Portfolio'">Portfolio</a>
                 </li>
                 <li>
-                    <a class="a-menu" onClick="location.href='/Contact'">Contact</a>
+                    <a class="a-menu" onClick="location.href='/Posts'">Posts</a>
                 </li>
                 </ul>
             </div>
         </div>
-
         <div class="portfolio">
+            {% for item in list %}
+                <div class="portfolio_one">
+                    <div class="portfolio_before">
+                        <img src="../static/img/{{item[8]}}"> 
+                    </div>
+                    <div class="portfolio_after">
+                        <div class="group">
+                            <div class="title">{{item[3]}}</div>
+                            <div class="stack">{{item[5]}}</div>
+                            <div class="button" onclick="popup('{{item[0]}}')">View Details</div>    
+                        </div>
+                    </div>
 
-            <h4>
-                <a class="portfolio-links" href="https://github.com/DEVengersAssemble/airdnd-backend">Github Link</a>
-            </h4>
-            <hr>
-            <h4>팀 프로젝트 - Airdnd</h4>
-            <hr>
-            <p>프로젝트 기간 : </p>
-            <p>사용 프로그램 : </p>
-            <p>사용 언어 : </p>
-            <hr>
-            <p>[프로젝트 설명]</p>
-            <br>
-            ~~~
-
-
+                </div>
+                <div class="portfolio_popup" id="popup_{{item[0]}}">
+                    <div class="portfolio_popup_content">
+                        <hr>
+                        <h4>{{item[3]}}  </h4>
+                        <hr>
+                        <p>프로젝트 기간 : {{item[4]}}</p>
+                        <p>사용 언어 : {{item[6]}}</p>
+                        <hr>
+                        <p>[프로젝트 설명]</p>
+                        <br>
+                        {{item[7]}}
+                    </div>
+                    <div class="portfolio_popup_link" onclick="location.href='{{item[1]}}'">⇱ &nbsp;VIEW SITE</div>
+                    <div class="portfolio_popup_exit" onclick="popup_exit('{{item[0]}}')"> ✖️ </div>
+                </div>
+                
+            {% endfor %}
         <div>
-
+            
     </body>
 </html>
